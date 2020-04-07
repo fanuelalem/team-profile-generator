@@ -49,6 +49,8 @@ console.log(response)
 
         const html = generateHTML({color, photo, name, location, company, profile, blog, bio, repos, followers, following });
 
+
+
         conversion({ html: html}, function (err, result) {
           if (err) {
             return console.error(err);
@@ -58,6 +60,8 @@ console.log(response)
           result.stream.pipe(fs.createWriteStream('./index.pdf'));
           conversion.kill(); 
         });
+
+        fs.writeFileSync("./index.html",html)
 
 
 
