@@ -1,4 +1,4 @@
-# quiz game
+# readme generator
 
 node profile generator
 
